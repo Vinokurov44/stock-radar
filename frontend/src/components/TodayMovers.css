@@ -1,0 +1,39 @@
+.today-movers {
+  min-width: 0;
+}
+
+.today-movers__title {
+  margin: 0 0 12px;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.today-movers__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.today-movers__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding: 10px 16px 10px 0;
+  font-size: 17px;
+}
+
+.today-movers__change {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 20px;
+  font-weight: 700;
+  white-space: nowrap; /* "▲ +22" never breaks */
+}
+
+.today-movers__empty {
+  margin: 0;
+  color: var(--text-muted);
+}

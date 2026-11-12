@@ -1,0 +1,39 @@
+.signal-zones {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.signal-zones__row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.signal-zones__row:last-child {
+  border-bottom: none;
+}
+
+.signal-zones__name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.signal-zones__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.signal-zones__range {
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--text-muted);
+}
+
+.signal-zones__note {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: var(--text-muted);
+}

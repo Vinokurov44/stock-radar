@@ -1,0 +1,47 @@
+.history-tooltip {
+  position: absolute;
+  z-index: 1;
+  min-width: 200px;
+  padding: 12px 16px;
+  background: #1f2023;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transform: translate(16px, -50%); /* to the right of the point, vertically centered */
+  pointer-events: none; /* the mouse goes through it to the chart */
+}
+
+.history-tooltip--left {
+  transform: translate(calc(-100% - 16px), -50%); /* to the left of the point */
+}
+
+.history-tooltip p {
+  margin: 0;
+}
+
+.history-tooltip__date {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.history-tooltip__main {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin: 6px 0 !important;
+  font-weight: 600;
+}
+
+.history-tooltip__score {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 24px;
+  color: var(--text);
+}
+
+.history-tooltip__mover {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.history-tooltip__mover strong {
+  color: var(--text);
+}

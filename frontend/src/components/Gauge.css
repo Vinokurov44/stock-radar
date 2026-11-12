@@ -1,0 +1,23 @@
+:root {
+  --tick: #3a3c42;
+}
+
+.gauge {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.gauge__value {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 46px;
+  font-weight: 500;
+  fill: var(--text);
+}
+
+.gauge__label {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}

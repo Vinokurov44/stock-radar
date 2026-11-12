@@ -1,0 +1,118 @@
+.feedback {
+  --feedback-accent: #facc15; /* Tense band color */
+  --feedback-error: #f87171; /* Crisis band color */
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.feedback__subtitle {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.feedback__types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.feedback__type {
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.feedback__type:hover {
+  border-color: var(--text-muted);
+}
+
+.feedback__type--active {
+  border-color: var(--feedback-accent);
+  background: color-mix(in srgb, var(--feedback-accent) 12%, transparent);
+  color: var(--feedback-accent);
+  font-weight: 600;
+}
+
+.feedback__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 12px;
+}
+
+.feedback__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.feedback__label {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.feedback__input {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+}
+
+.feedback__input::placeholder {
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+
+.feedback__input:focus-visible {
+  outline: none;
+  border-color: var(--text-muted);
+}
+
+textarea.feedback__input {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.feedback__input--invalid {
+  border-color: var(--feedback-error);
+}
+
+.feedback__error {
+  margin: 0;
+  color: var(--feedback-error);
+  font-size: 14px;
+}
+
+.feedback__submit {
+  padding: 12px;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--text);
+  color: var(--bg);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.feedback__submit:hover {
+  opacity: 0.9;
+}
+
+.feedback__submit:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.feedback__submit:focus-visible,
+.feedback__type:focus-visible {
+  outline: 2px solid var(--text-muted);
+  outline-offset: 2px;
+}

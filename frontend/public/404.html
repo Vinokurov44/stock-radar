@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 · Stock Radar</title>
+    <style>
+      :root {
+        --bg: #0f1011;
+        --text: #ededed;
+        --text-muted: #9a9ca0;
+        --crisis: #f87171;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--bg);
+        color: var(--text);
+        font-family: 'IBM Plex Sans', system-ui, sans-serif;
+        text-align: center;
+      }
+
+      .bull {
+        width: 360px;
+        max-width: 90vw; /* never wider than the screen */
+      }
+
+      .code {
+        margin: 24px 0 8px;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 48px;
+        font-weight: 500;
+      }
+
+      .title {
+        margin: 0 0 8px;
+        font-size: 22px;
+        font-weight: 600;
+      }
+
+      .note {
+        margin: 0 0 28px;
+        color: var(--text-muted);
+      }
+
+      .back {
+        color: var(--text);
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+
+      .back:hover {
+        color: var(--text-muted);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <svg class="bull" viewBox="0 0 320 280" aria-hidden="true">
+        <!-- shadow -->
+        <ellipse cx="160" cy="264" rx="105" ry="9" fill="#1a1b1d" />
+
+        <g stroke="#2b211a" stroke-width="3" stroke-linejoin="round">
+          <!-- body, belly, legs, hooves -->
+          <ellipse cx="160" cy="205" rx="78" ry="58" fill="#7d5f49" />
+          <ellipse cx="160" cy="215" rx="44" ry="36" fill="#a0806a" stroke="none" />
+          <path d="M118 220 L112 252 L138 252 L140 222 Z" fill="#6e5240" />
+          <path d="M180 222 L182 252 L208 252 L202 220 Z" fill="#6e5240" />
+          <rect x="110" y="250" width="30" height="10" fill="#3a2c22" />
+          <rect x="180" y="250" width="30" height="10" fill="#3a2c22" />
+
+          <!-- horns, with a flat shade inside -->
+          <path d="M118 92 C92 90 66 72 58 40 C76 58 96 66 122 70 Z" fill="#efe6d2" />
+          <path d="M202 92 C228 90 254 72 262 40 C244 58 224 66 198 70 Z" fill="#efe6d2" />
+          <path d="M114 86 C96 84 80 74 70 58 C84 68 98 72 116 74 Z" fill="#cfc2a4" stroke="none" />
+          <path
+            d="M206 86 C224 84 240 74 250 58 C236 68 222 72 204 74 Z"
+            fill="#cfc2a4"
+            stroke="none"
+          />
+
+          <!-- ears -->
+          <ellipse cx="92" cy="112" rx="24" ry="13" transform="rotate(-25 92 112)" fill="#8a6a52" />
+          <ellipse
+            cx="92"
+            cy="112"
+            rx="14"
+            ry="7"
+            transform="rotate(-25 92 112)"
+            fill="#e0b3aa"
+            stroke="none"
+          />
+          <ellipse
+            cx="228"
+            cy="112"
+            rx="24"
+            ry="13"
+            transform="rotate(25 228 112)"
+            fill="#8a6a52"
+          />
+          <ellipse
+            cx="228"
+            cy="112"
+            rx="14"
+            ry="7"
+            transform="rotate(25 228 112)"
+            fill="#e0b3aa"
+            stroke="none"
+          />
+
+          <!-- head with a flat shade on the right -->
+          <ellipse cx="160" cy="122" rx="62" ry="56" fill="#8a6a52" />
+          <path
+            d="M200 88 Q234 128 196 172 Q216 128 200 88 Z"
+            fill="#6e5240"
+            stroke="none"
+            opacity="0.6"
+          />
+
+          <!-- tuft -->
+          <path
+            d="M142 72 Q148 52 158 68 Q166 50 174 68 Q182 56 182 76 Q162 70 142 72 Z"
+            fill="#6e5240"
+          />
+
+          <!-- eyes -->
+          <ellipse cx="136" cy="118" rx="15" ry="17" fill="#f7f3ec" />
+          <ellipse cx="184" cy="118" rx="15" ry="17" fill="#f7f3ec" />
+        </g>
+
+        <!-- pupils looking down, highlights, watery lower lids -->
+        <circle cx="137" cy="125" r="8" fill="#1b1b1d" />
+        <circle cx="183" cy="125" r="8" fill="#1b1b1d" />
+        <circle cx="140" cy="121" r="3" fill="#ffffff" />
+        <circle cx="186" cy="121" r="3" fill="#ffffff" />
+        <circle cx="134" cy="129" r="1.5" fill="#ffffff" />
+        <circle cx="180" cy="129" r="1.5" fill="#ffffff" />
+        <path
+          d="M124 128 Q136 136 148 128"
+          fill="none"
+          stroke="#a8cdee"
+          stroke-width="2.5"
+          stroke-linecap="round"
+        />
+        <path
+          d="M172 128 Q184 136 196 128"
+          fill="none"
+          stroke="#a8cdee"
+          stroke-width="2.5"
+          stroke-linecap="round"
+        />
+
+        <!-- sad eyebrows: inner ends raised -->
+        <path
+          d="M116 96 Q130 88 146 86"
+          fill="none"
+          stroke="#2b211a"
+          stroke-width="6"
+          stroke-linecap="round"
+        />
+        <path
+          d="M174 86 Q190 88 204 96"
+          fill="none"
+          stroke="#2b211a"
+          stroke-width="6"
+          stroke-linecap="round"
+        />
+
+        <!-- tear -->
+        <path
+          d="M128 140 Q120 152 128 158 Q136 152 128 140 Z"
+          fill="#a8cdee"
+          stroke="#2b211a"
+          stroke-width="2"
+        />
+
+        <!-- muzzle with a flat shade, nostrils, frown -->
+        <ellipse
+          cx="160"
+          cy="156"
+          rx="40"
+          ry="26"
+          fill="#e0b3aa"
+          stroke="#2b211a"
+          stroke-width="3"
+        />
+        <path d="M124 162 Q160 186 196 162 Q160 176 124 162 Z" fill="#c9958c" />
+        <ellipse cx="146" cy="152" rx="6" ry="8" fill="#7a4c47" />
+        <ellipse cx="174" cy="152" rx="6" ry="8" fill="#7a4c47" />
+        <path
+          d="M146 172 Q160 164 174 172"
+          fill="none"
+          stroke="#2b211a"
+          stroke-width="3.5"
+          stroke-linecap="round"
+        />
+
+        <!-- small tablet with a falling chart, held in front -->
+        <rect
+          x="120"
+          y="196"
+          width="80"
+          height="52"
+          rx="6"
+          fill="#17181a"
+          stroke="#2b211a"
+          stroke-width="3"
+        />
+        <polyline
+          points="130,210 150,214 164,208 178,226 190,234"
+          fill="none"
+          stroke="#f87171"
+          stroke-width="3"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M181 234 L190 234 L186 225"
+          fill="none"
+          stroke="#f87171"
+          stroke-width="3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+
+      <p class="code">404</p>
+      <h1 class="title">This page went bearish.</h1>
+      <p class="note">Even the bull couldn't find it.</p>
+      <a class="back" href="/">Back to the radar</a>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+:root {
+  --bg: #0f1011;
+  --surface: #17181a;
+  --border: #26282c;
+  --text: #ededed;
+  --text-muted: #9a9ca0;
+  --radius: 6px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+}

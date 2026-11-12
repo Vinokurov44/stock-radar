@@ -1,0 +1,113 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 40px;
+}
+
+.app-header__nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 2vw, 32px);
+}
+
+.app-header__link {
+  padding: 6px 16px;
+  font: inherit;
+  font-weight: 500;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.app-header__icon-link {
+  display: flex;
+  color: var(--text-muted);
+  transition:
+    transform 0.15s ease,
+    color 0.15s ease;
+}
+.app-header__icon-link:hover {
+  color: var(--text);
+  transform: scale(1.15);
+}
+
+.app-header__link:hover,
+.app-header__icon-link:hover {
+  border-color: var(--text-muted);
+  transform: scale(1.06);
+}
+
+.app-header__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.app-header__title {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.app-header__updated {
+  margin: 0;
+  font-size: 19px;
+  color: var(--text-muted);
+}
+
+/* Radar icon animation */
+.radar-icon__sweep {
+  transform-origin: 12px 12px;
+  animation: radar-sweep 4s linear infinite;
+}
+
+.radar-icon__blip {
+  fill: #4ade80; /* Calm green */
+  animation: radar-blip 4s linear infinite;
+}
+
+@keyframes radar-sweep {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* The beam reaches the blip a quarter of a turn after the start (90° of 360°). */
+@keyframes radar-blip {
+  0%,
+  22% {
+    opacity: 0.2;
+  }
+  25% {
+    opacity: 1;
+  }
+  60%,
+  100% {
+    opacity: 0.2;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .radar-icon__sweep,
+  .radar-icon__blip {
+    animation: none;
+  }
+}
+/* Visible frame when moving with the keyboard (Tab) */
+.app-header__link:focus-visible,
+.app-header__icon-link:focus-visible {
+  outline: 2px solid var(--text-muted);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-header__link:hover,
+  .app-header__icon-link:hover {
+    transform: none;
+  }
+}

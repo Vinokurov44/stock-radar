@@ -1,0 +1,163 @@
+.history-chart {
+  margin-top: 40px;
+  padding: 28px 32px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.history-chart__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.history-chart__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.history-chart__subtitle {
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.history-chart__subtitle span {
+  font-weight: 600;
+}
+
+.history-chart__stats {
+  display: flex;
+  gap: 24px;
+  font-size: 17px;
+  color: var(--text-muted);
+}
+
+.history-chart__stats strong {
+  margin-left: 4px;
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--text);
+}
+
+.history-chart__svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.history-chart__grid {
+  stroke: var(--border);
+  stroke-width: 1;
+}
+
+.history-chart__axis {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  fill: var(--text-muted);
+}
+
+.history-chart__zone {
+  font-size: 13px;
+  fill: var(--text-muted);
+}
+
+.history-chart__zone--current {
+  font-weight: 600;
+}
+
+.history-chart__marker {
+  fill: var(--surface);
+  stroke: var(--text);
+  stroke-width: 2;
+}
+
+.history-chart__note {
+  font-size: 12px;
+  fill: var(--text-muted);
+}
+
+.history-chart__latest {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.history-chart__date {
+  font-size: 12px;
+  fill: var(--text-muted);
+}
+
+.history-chart__date--today {
+  font-weight: 600;
+  fill: var(--text);
+}
+
+.history-chart__empty {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.history-chart__period-change {
+  font-weight: 600;
+}
+
+/* "Breathing" ring around today's point: grows and fades out, then starts again */
+.history-chart__pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: history-pulse 2s ease-out infinite;
+}
+
+@keyframes history-pulse {
+  from {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  to {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .history-chart__pulse {
+    animation: none;
+    opacity: 0;
+  }
+}
+
+.history-chart__plot {
+  transition: opacity 0.15s ease;
+}
+
+.history-chart__plot--dimmed {
+  opacity: 0.45;
+}
+
+.history-chart__hover-column {
+  fill: var(--text);
+  opacity: 0.04;
+}
+
+.history-chart__hover-line {
+  stroke: var(--text-muted);
+  stroke-width: 1;
+  stroke-dasharray: 4 4;
+}
+
+.history-chart__hover-dot {
+  stroke: var(--surface);
+  stroke-width: 3;
+}
+
+.history-chart__date--active {
+  font-weight: 600;
+  fill: var(--text);
+}
+
+.history-chart__plot-area {
+  position: relative; /* the tooltip is placed relative to this box */
+}

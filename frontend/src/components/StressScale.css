@@ -1,0 +1,47 @@
+.stress-scale {
+  position: relative;
+  display: flex;
+  gap: 4px;
+  max-width: 700px;
+  margin: 28px 0 20px;
+}
+
+.stress-scale__band {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 0;
+  min-width: 0;
+}
+
+.stress-scale__segment {
+  height: 6px;
+  opacity: 0.35; /* other zones are dimmed */
+  transition:
+    opacity 0.2s,
+    transform 0.2s;
+}
+
+.stress-scale__label {
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.stress-scale__marker {
+  position: absolute;
+  top: -5px;
+  width: 3px;
+  height: 16px;
+  background: var(--text);
+  transform: translateX(-50%);
+}
+
+.stress-scale__band--active .stress-scale__segment {
+  opacity: 1;
+  transform: scaleY(1.6); /* a bit thicker, without moving the labels */
+}
+
+.stress-scale__band--active .stress-scale__label {
+  font-weight: 600;
+}

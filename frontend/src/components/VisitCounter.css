@@ -1,0 +1,12 @@
+.visit-counter {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted);
+}
+
+.visit-counter__number {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  color: var(--text);
+}

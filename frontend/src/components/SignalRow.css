@@ -1,0 +1,84 @@
+.signal-row__name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.signal-row__description {
+  margin-top: 4px;
+  color: var(--text-muted);
+}
+
+.signal-row__score {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.signal-row__score-value {
+  min-width: 36px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.signal-row__bar {
+  width: 200px;
+  height: 6px;
+  background: var(--border);
+}
+
+.signal-row__bar-fill {
+  height: 100%;
+}
+
+.signal-row__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.signal-row__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.signal-row__value {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.signal-row__date {
+  margin-top: 4px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.signal-row__chart {
+  color: var(--text-muted);
+}
+.signal-row__info {
+  display: flex;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.signal-row__info:hover {
+  color: var(--text);
+}
+.signal-row__unit {
+  margin-left: 4px;
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-muted);
+}
