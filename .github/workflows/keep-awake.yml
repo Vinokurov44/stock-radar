@@ -2,7 +2,7 @@ name: Keep API awake
 
 on:
   schedule:
-    - cron: '*/10 * * * *' # every 10 minutes (UTC)
+    - cron: '*/10 * * * *' # every 10 minutes  (UTC)
   workflow_dispatch:
 
 jobs:
