@@ -4,11 +4,16 @@ import { collectSignals } from './jobs/collectSignals.js';
 
 const PORT = process.env.PORT || 5000;
 const COLLECT_INTERVAL_MS = 60 * 60 * 1000;
+const RUN_COLLECTOR = process.env.RUN_COLLECTOR === 'true';
 
 try {
   await connectDB(process.env.MONGODB_URI);
-  collectSignals();
-  setInterval(collectSignals, COLLECT_INTERVAL_MS);
+
+  // Locally the server collects by itself. In production GitHub Actions does it.
+  if (RUN_COLLECTOR) {
+    collectSignals();
+    setInterval(collectSignals, COLLECT_INTERVAL_MS);
+  }
 
   app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
