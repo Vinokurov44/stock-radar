@@ -44,7 +44,7 @@ function MobileBlock() {
 
       <h1 className="mobile-block__title">Mobile version is on its way</h1>
       <p className="mobile-block__text">
-        Right now {SITE_NAME} works on desktop only. A phone-friendly version is in progress — until
+        Right now {SITE_NAME} works on desktop only. A phone-friendly version is in progress - until
         then, open the site on a computer to see the full dashboard.
       </p>
 

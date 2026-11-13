@@ -16,7 +16,7 @@ export default function AppFooter() {
         <div>
           <h2 className="app-footer__title">Have an idea or spotted a bug?</h2>
           <p className="app-footer__text">
-            Ideas, bugs, data that looks wrong — I read every message.
+            Ideas, bugs, data that looks wrong - I read every message.
           </p>
         </div>
         <button
